@@ -43,7 +43,7 @@ export default class TransactionScreen extends React.Component{
 
         return(
         <View style={styles.container}> 
-            <Text style={styles.displayText}>{hasCameraPermissions === true ? this.state.scannedData : "Request Camera Permissions"}</Text>
+            <Text style={styles.displayText}>{hasCameraPermissions === true ? this.state.scannedData : "Please Grant Permissions"}</Text>
             <TouchableOpacity onPress={this.getCameraPermissions} style={styles.styleButton}>
                 <Text style={styles.buttonText}>
                     Scan QR
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     },
 
     styleButton : {
-        backgroundColor : "blue",
+        backgroundColor : "yellow",
         padding : 10,
         margin : 10,
         borderRadius : 20
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     buttonText : {
         fontWeight : "bold",
         fontSize : 20,
-        color : "white"
+        color : "blue"
     }
 
 })
